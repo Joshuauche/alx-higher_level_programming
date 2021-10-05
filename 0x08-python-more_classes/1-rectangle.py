@@ -3,7 +3,10 @@
 
 
 class Rectangle:
-
+    """Defines a rectangle.
+        Private instance attribute: width.
+        Instantiate with optional height.
+    """
     def __init__(self, width=0, height=0):
         """Initialize the data conditions"""
         self.__width__ = width
