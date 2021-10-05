@@ -9,8 +9,8 @@ class Rectangle:
     """
     def __init__(self, width=0, height=0):
         """Initialize the data conditions"""
-        self.__width__ = width
-        self.__height__ = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
