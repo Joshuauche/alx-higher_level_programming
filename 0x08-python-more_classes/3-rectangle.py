@@ -60,7 +60,7 @@ class Rectangle:
     def __str__(self):
         """prints in stdout the area with the character #"""
         if self.__width == 0 or self.__height == 0:
-            print("")
+            return ""
         hashes = []
         for i in range(0, self.__height):
             for j in range(0, self.__width):
