@@ -8,7 +8,7 @@ def matrix_divided(matrix, div):
     """
     Function that divides all elements of a matrix
     """
-    if type(div) not in [int, float]:
+    if not (type(div) != int or type(div) != float):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
