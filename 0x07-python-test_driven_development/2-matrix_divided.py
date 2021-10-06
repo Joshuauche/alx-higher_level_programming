@@ -18,4 +18,3 @@ def matrix_divided(matrix, div):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     quotient = [eval("{:.2f}".format(number / div)) for row in matrix for number in row]
     return quotient
-
