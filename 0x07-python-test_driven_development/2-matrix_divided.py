@@ -8,7 +8,7 @@ def matrix_divided(matrix, div):
     """
     Function that divides all elements of a matrix
     """
-    if not (type(div) != int or type(div) != float):
+    if type(div) not in [int, float]:
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
@@ -18,3 +18,4 @@ def matrix_divided(matrix, div):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     quotient = [eval("{:.2f}".format(number / div)) for row in matrix for number in row]
     return quotient
+
