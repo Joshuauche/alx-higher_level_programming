@@ -1,0 +1,46 @@
+# Test text with 2 new lines
+
+# Import
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# correct output
+>>> text_indentation("Lorem ipsum dolor sit amet.")
+Lorem ipsum dolor sit amet.
+<BLANKLINE>
+
+>>> text_indentation("Lorem ipsum dolor sit amet?")
+Lorem ipsum dolor sit amet?
+<BLANKLINE>
+
+>>> text_indentation("Lorem ipsum dolor sit amet:")
+Lorem ipsum dolor sit amet:
+<BLANKLINE>
+
+>>> text_indentation("Lorem ipsum dolor sit amet")
+Lorem ipsum dolor sit amet
+
+# Type Error
+>>> text_indentation(2332)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(23.12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation({})
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation([])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(2j)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
