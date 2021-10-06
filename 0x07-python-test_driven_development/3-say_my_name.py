@@ -7,8 +7,8 @@ Defines a function that prints two names
 def say_my_name(first_name, last_name=""):
     """
     prints first name and last name
-    :param first_name: 
-    :param last_name: 
+    :param first_name: first name
+    :param last_name: last name
     :return: first name and last name
     """
     if type(first_name) != str:
