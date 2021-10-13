@@ -16,7 +16,7 @@ def pascal_triangle(n):
 
     # building the first row
     if n <= 0:
-        return result
+        return []
     for i in range(n - 1):
         # building a new temporary array not modifying the result list
         temp = [0] + result[-1] + [0]
