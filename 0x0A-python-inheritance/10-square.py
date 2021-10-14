@@ -1,42 +1,34 @@
 #!/usr/bin/python3
 """
-Defining BaseGeometry class
-methods:
-__init__(self)
-
+Defining the Square class
+Method:
+__init(self)
+area()
 """
+Rectangle = __import__("9-rectangle").Rectangle
 
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
+class Square(Rectangle):
 
-class Rectangle(BaseGeometry):
-    """
-    inherits from class BaseGeometry
-    """
-
-    def __init__(self, width, height):
+    def __init__(self, size):
         """
-        validates positive integer using integer_validation method
-        private width and height
-        :param width:
-        :param height:
+        Instantiation with size
+        :param size:
         """
-        self.integer_validator("width", width)
-        self.__width = width
-        self.integer_validator("height", height)
-        self.__height = height
+        self.__size = size
+        self.integer_validator("size", size)
 
     def area(self):
         """
-        implementing area method
-        :return: area of rectangle
+        Implementing the area of square
+        :return: area of a sqaure
         """
-        return self.__width * self.__height
+        return self.__size ** 2
 
     def __str__(self):
         """
-        string method
-        :return: rectangle description
+        string maethod
+        :return: the square description
         """
         return "[{:s}] {:d}/{:d}".format(self.__class__.__name__,
-                                         self.__width, self.__height)
+                                         self.__size,self.__size)
