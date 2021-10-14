@@ -38,4 +38,5 @@ class Rectangle(BaseGeometry):
         string method
         :return: rectangle description
         """
-        return "[Rectangle] {} / {}".format(self.__width, self.__height)
+        return "[{:s}] {:d}/{:d}".format(self.__class__.__name__,
+                                         self.__width, self.__height)
