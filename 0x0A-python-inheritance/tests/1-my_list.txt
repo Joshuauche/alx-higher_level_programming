@@ -22,6 +22,15 @@
 >>> my_list = MyList()
 >>> my_list.append("hello")
 
+>>> my_list = MyList("Hello")
+
+>>> my_list
+['H', 'e', 'l', 'l', 'o']
+
+>>> my_list.print_sorted()
+['H', 'e', 'l', 'l', 'o']
+
+
 
 # Other Errors
 >>> my_list = MyList()
@@ -29,5 +38,6 @@
 Traceback (most recent call last):
 ...
 TypeError: append() takes exactly one argument (0 given)
+
 >>> print(my_list)
 []
