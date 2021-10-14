@@ -12,6 +12,10 @@ Rectangle = __import__("9-rectangle").Rectangle
 
 
 class Square(Rectangle):
+    """
+    Inherits from class Rectangle
+    class rectangle inherits from class BaseGeometry
+    """
 
     def __init__(self, size):
         """
@@ -21,7 +25,7 @@ class Square(Rectangle):
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
-    
+
     def area(self):
         """
         Implementing area method
