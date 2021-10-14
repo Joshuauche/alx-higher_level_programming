@@ -30,6 +30,10 @@
 >>> my_list.print_sorted()
 ['H', 'e', 'l', 'l', 'o']
 
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
 
 
 # Other Errors
