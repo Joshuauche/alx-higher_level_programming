@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """"
-Read file
-functions:
-def read_file(filename=""):
+Reads file
 """
 
 
