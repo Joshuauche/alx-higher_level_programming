@@ -13,7 +13,6 @@ def save_to_json_file(my_obj, filename):
     :return: JSON represntations
     """
 
-    json_obj = json.dumps(my_obj)
-
     with open(filename, mode='w') as a_file:
+        json_obj = json.dumps(my_obj)
         a_file.write(json_obj)
