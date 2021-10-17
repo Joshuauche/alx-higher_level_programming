@@ -12,6 +12,7 @@ def read_file(filename=""):
     :param filename:
     :return: file strings
     """
+
     with open(filename, encoding='utf-8', mode='r') as a_file:
         read_text = a_file.read()
         print(read_text)
