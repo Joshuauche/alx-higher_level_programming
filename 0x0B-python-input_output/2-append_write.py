@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """
 Appends text to a file
 Creates it, if doesn't exist
