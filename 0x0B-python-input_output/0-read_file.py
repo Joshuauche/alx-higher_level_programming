@@ -15,5 +15,3 @@ def read_file(filename=""):
     with open(filename, encoding='utf-8', mode='r') as a_file:
         read_text = a_file.read()
         print(read_text)
-
-    a_file.close()
