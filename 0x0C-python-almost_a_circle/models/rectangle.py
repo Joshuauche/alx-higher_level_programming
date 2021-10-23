@@ -116,3 +116,15 @@ class Rectangle(Base):
         :return: area of a rectangle
         """
         return self.__height * self.__width
+
+    def display(self):
+        """
+        displays the area of rectangle in hashes
+        :return: #
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        for i in range(0, self.__height):
+            for j in range(0, self.__width):
+                print("#", end='')
+            print()
