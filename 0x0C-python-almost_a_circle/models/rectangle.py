@@ -123,10 +123,14 @@ class Rectangle(Base):
         :return: #
         """
         if self.__width == 0 or self.__height == 0:
-            return ""
+            print("")
+            return
+
         for i in range(0, self.__height):
-            for j in range(0, self.__width):
-                print("#", end='')
+            for j in range(0, self.__x):
+                print(" ", end="")
+            for k in range(0, self.__width):
+                print("#", end="")
             print()
 
     def __str__(self):
