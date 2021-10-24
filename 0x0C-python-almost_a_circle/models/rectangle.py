@@ -146,7 +146,7 @@ class Rectangle(Base):
                                                        self.__width,
                                                        self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         assigns an argument to each attribute:
         :param args:
@@ -154,12 +154,34 @@ class Rectangle(Base):
         """
         new_args = [self.id, self.__width, self.__height, self.__x, self.__y]
         if len(args) == 0 or args is None:
-            return
+            if len(kwargs) == 0:
+                return
+            else:
+                try:
+                    new_args[0] = kwargs['id']
+                except KeyError:
+                    pass
+                try:
+                    new_args[1] = kwargs['width']
+                except KeyError:
+                    pass
+                try:
+                    new_args[2] = kwargs['height']
+                except KeyError:
+                    pass
+                try:
+                    new_args[3] = kwargs['x']
+                except KeyError:
+                    pass
+                try:
+                    new_args[4] = kwargs['y']
+                except KeyError:
+                    pass
         else:
             for i in range(len(args)):
                 new_args[i] = args[i]
-                self.__init__(new_args[1],
-                              new_args[2],
-                              new_args[3],
-                              new_args[4],
-                              new_args[0])
+        self.__init__(new_args[1],
+                      new_args[2],
+                      new_args[3],
+                      new_args[4],
+                      new_args[0])
