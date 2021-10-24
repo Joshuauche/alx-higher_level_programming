@@ -125,7 +125,7 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             print("")
             return
-        for j in range(0, self.__y):
+        for y in range(0, self.__y):
             print()
         for i in range(0, self.__height):
             for j in range(0, self.__x):
@@ -145,3 +145,21 @@ class Rectangle(Base):
                                                        self.__y,
                                                        self.__width,
                                                        self.__height)
+
+    def update(self, *args):
+        """
+        assigns an argument to each attribute:
+        :param args:
+        :return: assigns an argument
+        """
+        new_args = [self.id, self.__width, self.__height, self.__x, self.__y]
+        if len(args) == 0 or args is None:
+            return
+        else:
+            for i in range(len(args)):
+                new_args[i] = args[i]
+                self.__init__(new_args[1],
+                              new_args[2],
+                              new_args[3],
+                              new_args[4],
+                              new_args[0])
