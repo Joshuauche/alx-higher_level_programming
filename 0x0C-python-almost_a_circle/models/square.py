@@ -5,7 +5,6 @@ methods:
 def __init__(self, size, x=0, y=0, id=None):
 def __str__(self):
 """
-from typing import Sized
 from models.rectangle import Rectangle
 
 
