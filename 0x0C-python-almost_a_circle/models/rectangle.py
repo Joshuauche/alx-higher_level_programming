@@ -185,3 +185,14 @@ class Rectangle(Base):
                       new_args[3],
                       new_args[4],
                       new_args[0])
+
+    def to_dictionary(self):
+        """
+        Returns dictionary representation of a Rectangle
+        :return:
+        """
+        return {"id": self.id,
+                "width": self.__width,
+                "height": self.__height,
+                "x": self.__x,
+                "y": self.__y}
