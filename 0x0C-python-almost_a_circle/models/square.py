@@ -21,8 +21,8 @@ class Square(Rectangle):
         :param y:
         :param id:
         """
-        super().__init__(size, size, x, y, id)
         self.size = size
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """
