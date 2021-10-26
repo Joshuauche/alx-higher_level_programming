@@ -80,3 +80,16 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        returns a list of file instances
+        :return:
+        """
+        try:
+            with open(cls.__name__ + ".json", mode='r') as json_file:
+                obj = Base.from_json_string(json_file.read())
+                return [cls.create(**d) for d in obj]
+        except IOError:
+            return []
