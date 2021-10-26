@@ -52,3 +52,15 @@ class Base:
             else:
                 dict_list = [i.to_dictionary() for i in list_objs]
                 a_file.write(Base.to_json_string(dict_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Deserialization of JSON to string
+        :param json_string:
+        :return:
+        """
+        if json_string is None or json_string == []:
+            return "[]"
+        else:
+            return json.loads(json_string)
