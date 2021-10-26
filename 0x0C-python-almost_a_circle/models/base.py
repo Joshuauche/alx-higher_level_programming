@@ -37,3 +37,18 @@ class Base:
             raise TypeError("list_dictionaries must be a list of dictionaries")
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """
+        JSON Serialization of a list of objects
+        :param list_objs:
+        :return:
+        """
+        filename = cls.__name__ + ".json"
+        with open(filename, mode='w') as a_file:
+            if list_objs is None or list_objs == []:
+                a_file.write("[]")
+            else:
+                dict_list = [i.to_dictionary() for i in list_objs]
+                a_file.write(Base.to_json_string(dict_list))
