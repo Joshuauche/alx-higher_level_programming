@@ -61,6 +61,22 @@ class Base:
         :return:
         """
         if json_string is None or json_string == []:
-            return []
+            return "[]"
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+
+        :param dictionary:
+        :return:
+        """
+        if not dictionary and dictionary == {}:
+            return
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1,1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
