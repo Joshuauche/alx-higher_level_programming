@@ -2,6 +2,8 @@
 -- Don’t list rows without a name value
 -- Records should be listed by descending score
 
-SELECT score, name
-FROM second_table
-WHERE LENGTH(name) > 0;
+SELECT score, name 
+FROM second_table 
+WHERE LENGTH(name) > 0 
+ORDER BY score 
+DESC;
