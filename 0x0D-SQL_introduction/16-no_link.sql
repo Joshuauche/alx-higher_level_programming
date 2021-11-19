@@ -4,5 +4,4 @@
 
 SELECT score, name
 FROM second_table
-WHERE LENGHT(name) >
-0;
+WHERE LENGTH(name) > 0;
