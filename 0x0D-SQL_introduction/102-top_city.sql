@@ -2,8 +2,9 @@
 SELECT city
 AVG(value)
 AS avg_temp FROM temperatures
-BETWEEN July AND
-August
+WHERE month 
+BETWEEN 7 AND 8
+AND month = August
 GROUP BY city
 ORDER BY avg_temp
 DESC;
