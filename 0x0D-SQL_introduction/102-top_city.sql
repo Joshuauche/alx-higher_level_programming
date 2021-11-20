@@ -4,7 +4,6 @@ AVG(value)
 AS avg_temp FROM temperatures
 WHERE month 
 BETWEEN 7 AND 8
-AND month = August
 GROUP BY city
 ORDER BY avg_temp
 DESC LIMIT 3;
