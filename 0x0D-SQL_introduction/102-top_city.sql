@@ -7,4 +7,4 @@ BETWEEN 7 AND 8
 AND month = August
 GROUP BY city
 ORDER BY avg_temp
-DESC;
+DESC LIMIT 3;
