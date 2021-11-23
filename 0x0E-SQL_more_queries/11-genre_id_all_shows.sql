@@ -5,8 +5,8 @@
 -- You can use only one SELECT statement
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
-FULL JOIN tv_show_genres
-FULL JOIN tv_genres
+LEFT JOIN tv_show_genres
+LEFT JOIN tv_genres
 ON tv_shows.id = show_id
 AND tv_genres.id = genre_id
 ORDER BY tv_shows.title, tv_show_genres.genre_id
