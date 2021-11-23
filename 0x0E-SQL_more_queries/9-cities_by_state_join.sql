@@ -3,7 +3,7 @@
 -- Each record should display: cities.id - cities.name - states.name
 -- Results must be sorted in ascending order by cities.id
 -- You can use only one SELECT statement
-SELECT cities.id, cities.name, states.name
+SELECT DISTINCT cities.id, cities.name, states.name
 FROM cities
 JOIN state
 ON cities.state_id = states.id
