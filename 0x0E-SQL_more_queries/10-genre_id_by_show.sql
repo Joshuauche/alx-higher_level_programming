@@ -3,10 +3,10 @@
 -- Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
 -- You can use only one SELECT statement
 SELECT tv_shows.title, tv_show_genres.genre_id
-FROM tv_genres
-JOIN tv_shows
+FROM tv_shows
 JOIN tv_show_genres
+JOIN tv_genres
 ON tv_shows.id = show_id
-AND tv_show_genres = genre_id
+AND tv_genres.id = genre_id
 ORDER BY tv_shows.title, tv_show_genres.genre_id
 ASC;
