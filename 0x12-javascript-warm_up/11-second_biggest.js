@@ -1,13 +1,8 @@
 #!/usr/bin/node
 if (process.argv.length <= 3) {
-  console.log(0);
+  console.log('0');
 } else {
-  const num = process.argv;
-  let biggest = 0;
-  for (let i = 0; i < num.length; i++) {
-    if (num[i] > biggest) {
-      biggest = num[i];
-    }
-  }
-  console.log(parseInt(biggest));
+  const arr = process.argv.slice(2).map(Number);
+  const second = arr.sort(function (a, b) { return b - a; })[1];
+  console.log(second);
 }
