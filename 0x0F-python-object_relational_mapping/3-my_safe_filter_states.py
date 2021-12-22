@@ -23,7 +23,7 @@ def list_it():
                          db=db_name, port=port)
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name = %s "
-                "ORDER BY id ASC;", [state_searched])
+                "ORDER BY id ASC;", (state_searched,))
     result = cur.fetchall()
     cur.close()
     db.close()
