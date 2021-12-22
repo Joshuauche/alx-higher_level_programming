@@ -17,7 +17,8 @@ def list_it():
     db = MySQLdb.connect(host=host, user=username, passwd=password,
                          db=db_name, port=port)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE '{:s}' ORDER BY id ASC".format(state_searched))
+    cur.execute("SELECT * FROM states WHERE name LIKE '{:s}'"
+                " ORDER BY id ASC".format(state_searched))
     result = cur.fetchall()
     cur.close()
     db.close()
