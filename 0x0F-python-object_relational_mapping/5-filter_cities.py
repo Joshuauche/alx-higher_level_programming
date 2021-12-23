@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Write a script that takes in the name of a state as an argument and lists all cities of that state, using the database hbtn_0e_4_usa
+Write a script that takes in the name of a state as an argument
+ and lists all cities of that state, using the database hbtn_0e_4_usa
 """
 
 import MySQLdb
@@ -29,6 +30,7 @@ def list_it():
     db.close()
 
     print(", ".join([row[0] for row in result]))
+
 
 if __name__ == '__main__':
     list_it()
