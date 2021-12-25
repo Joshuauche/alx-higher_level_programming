@@ -19,13 +19,13 @@ def fetch_all():
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    check_a_s = session.query(State).filter(State.name == search_state).order_by(State.id).first()
+    check_a_s = session.query(State).filter(State.name == search_state)\
+        .order_by(State.id).first()
     # HERE: no SQL query, only objects!
     if check_a_s:
         print("{}".format(check_a_s.id))
     else:
         print("Not found")
-            
 
     session.close()
 
