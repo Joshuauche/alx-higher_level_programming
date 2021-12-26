@@ -33,7 +33,7 @@ def fetch_all():
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for city, state in session.query(State, City)\
+    for state, city in session.query(State, City)\
             .filter(City.state_id == State.id).order_by(City.id).all():
         print("{}: ({}) {}".format(state.name, city.id, city.name))
     session.close()
