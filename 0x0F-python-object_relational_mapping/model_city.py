@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Class city
+"""
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.sql.schema import ForeignKey
