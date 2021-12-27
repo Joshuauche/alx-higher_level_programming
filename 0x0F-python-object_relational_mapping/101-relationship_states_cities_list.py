@@ -42,9 +42,8 @@ def fetch_all():
     rows = session.query(State).order_by(State.id).all()
     for state_row in rows:
         print("{}: {}".format(state_row.id, state_row.name))
-        for city_row in rows:
+        for city_row in state_row.cities:
             print("    {}: {}".format(city_row.id, city_row.name))
-
     session.close()
 
 
