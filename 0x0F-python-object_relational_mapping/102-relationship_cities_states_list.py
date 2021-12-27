@@ -38,7 +38,7 @@ def fetch_all():
     rows = session.query(City).order_by(City.id).all()
     for from_city in rows:
         print("{}: {} -> {}".format(from_city.id,
-                                    from_city.name, from_city.state_id))
+                                    from_city.name, from_city.state.name))
 
     session.close()
 
