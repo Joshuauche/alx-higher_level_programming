@@ -32,10 +32,6 @@ def fetch_all():
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    new_state = State(name="California")
-    new_city = City(name="San Francisco")
-    # appending the city
-    new_state.cities.append(new_city)
 
     rows = session.query(State).order_by(State.id).all()
     for state_row in rows:
