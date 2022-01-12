@@ -1,3 +1,3 @@
 #!/bin/bash
 # script that displays only the status code without using pipe
-curl -LI "$1" -w '%{http_code}\n' -s
+curl -R -s -S -w  "%{http_code}\n" "$1"
