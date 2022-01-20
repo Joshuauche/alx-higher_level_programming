@@ -9,5 +9,4 @@ variable found in the header of the response
 """
 
 with urllib.request.urlopen(argv[1]) as response:
-    if response.readable():
-        print(response.getheader("X-Request-Id"))
+    print(response.getheader("X-Request-Id"))
