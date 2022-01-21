@@ -2,7 +2,7 @@
 
 """
 script that takes in a URL,
-sends a request to the URL and 
+sends a request to the URL and
 displays the body of the response (decoded in utf-8).
 
 manage urllib.error.HTTPError exceptions and print: Error code:
