@@ -14,9 +14,9 @@ from urllib.error import HTTPError
 
 if __name__ == "__main__":
     req = request.Request(argv[1])
-    with request.urlopen(req) as response:
-        try:
-            response
-        except HTTPError as e:
-            print(e.read)
-            print("Error code: {}".format(e.code))
+    try:
+        with request.urlopen(req) as response:
+            resp = response.read()
+            print(resp.decode("utf-8"))
+    except HTTPError as e:
+        print("Error code: {}".format(e.code))
