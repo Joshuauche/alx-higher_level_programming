@@ -13,8 +13,9 @@ import requests
 import sys
 
 if __name__ == "__main__":
+    req = requests.get(sys.argv[1])
     try:
-        req = requests.get(sys.argv[1])
+        req.raise_for_status()
         print(req.text)
     except HTTPError as e:
-        print("Error code: {}".format(e.responsedata.status_code))
+        print("Error code:", e.response.status_code)
