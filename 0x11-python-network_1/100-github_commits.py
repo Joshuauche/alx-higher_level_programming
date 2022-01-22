@@ -12,8 +12,8 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    req = requests.get("https://developer.github.com/v3/repos/commits/",
-                       auth=(sys.argv[1], sys.argv[2]))
+    req = requests.get("https://developer.github.com/repos/{}/{}/commits/"
+                       .format(sys.argv[1], sys.argv[2]))
     resp = req.json()
 
     for i in resp[:10]:
