@@ -17,4 +17,4 @@ if __name__ == "__main__":
         req = requests.get(sys.argv[1])
         print(req.text)
     except HTTPError as e:
-        print("Error code: {}".format(e.response.text))
+        print("Error code: {}".format(e.responsedata.status_code))
